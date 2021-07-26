@@ -9,6 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CollageDashboardApplication">
+        <activity android:name=".CourseDetails"></activity>
+        <activity android:name=".StudentDetails" />
+        <activity android:name=".AllStudentsActivity" />
+        <activity android:name=".AttendaceActivity" />
+        <activity android:name=".AddCoursesActivity" />
+        <activity android:name=".CourseActivity" />
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".TeacherActivity" />
+        <activity android:name=".AddStudent" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

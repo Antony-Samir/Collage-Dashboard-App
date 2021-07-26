@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddStudent">
+
+    <EditText
+        android:id="@+id/Stud_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10"
+        android:inputType="textPersonName">
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:text="Stud_name" />
+
+    <EditText
+        android:id="@+id/bookTitle_tf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Birth"
+        android:layout_alignRight="@+id/Stud_name"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/Birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Stud_name"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_marginTop="36dp"
+        android:text="Birth" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookTitle_tf"
+        android:layout_marginTop="80dp"
+        android:layout_toRightOf="@+id/Birth"
+        android:text="ADD_stu" />
+
+</RelativeLayout>

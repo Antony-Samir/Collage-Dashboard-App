@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentDetails">
+
+    <TextView
+        android:id="@+id/DetailsStudentID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="331dp"
+        android:layout_marginRight="331dp"
+        android:layout_marginBottom="618dp"
+        android:text="ID: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/detailsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="309dp"
+        android:layout_marginRight="309dp"
+        android:layout_marginBottom="550dp"
+        android:text="Name:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DetailsStudentID" />
+
+    <TextView
+        android:id="@+id/detailsDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="291dp"
+        android:layout_marginRight="291dp"
+        android:layout_marginBottom="495dp"
+        android:text="BirthDate:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailsName" />
+
+    <TextView
+        android:id="@+id/DetailsCourses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="295dp"
+        android:layout_marginRight="295dp"
+        android:layout_marginBottom="434dp"
+        android:text="Courses:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailsDate" />
+</androidx.constraintlayout.widget.ConstraintLayout>
