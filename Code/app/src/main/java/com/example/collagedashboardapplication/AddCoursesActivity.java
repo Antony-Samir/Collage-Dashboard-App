@@ -21,7 +21,7 @@ public class AddCoursesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_courses);
 
         Button add_course=(Button)findViewById(R.id.addCourseButton);
-        final EditText course_id=(EditText)findViewById(R.id.id_tf);
+        final EditText course_id=(EditText)findViewById(R.id.loginUsernameTxt);
         final EditText course_name=(EditText)findViewById(R.id.name_tf);
         final EditText course_creditH=(EditText)findViewById(R.id.bookTitle_tf);
         final EditText course_Book=(EditText)findViewById(R.id.creditH_tf);

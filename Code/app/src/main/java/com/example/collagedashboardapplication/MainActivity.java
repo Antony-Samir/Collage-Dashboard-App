@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button addBtn = findViewById(R.id.button);
+        Button addBtn = findViewById(R.id.loginBtn);
 
 
 
@@ -35,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
                 int password1 = 159;
                 Teacher teacher = new Teacher(name1, password1);
 
-                String fName = ((EditText)findViewById(R.id.id_tf)).getText().toString();
+                String fName = ((EditText)findViewById(R.id.loginUsernameTxt)).getText().toString();
 
 
-                int sPassword = Integer.parseInt(((EditText)findViewById(R.id.editText)).getText().toString());
+                int sPassword = Integer.parseInt(((EditText)findViewById(R.id.loginPasswordTxt)).getText().toString());
 
                 if ((fName.equals(admin.name)) && (sPassword == admin.Password))
                 {

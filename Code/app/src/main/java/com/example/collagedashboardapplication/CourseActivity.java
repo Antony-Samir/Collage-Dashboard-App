@@ -50,7 +50,7 @@ public class CourseActivity extends AppCompatActivity {
 
             }
         });
-        Button add_btn=(Button)findViewById(R.id.button4);
+        Button add_btn=(Button)findViewById(R.id.AddCourseBtn);
         add_btn.setOnClickListener(new View.OnClickListener() {
 
             @Override

@@ -31,14 +31,14 @@
         android:id="@+id/bookTitle_tf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Birth"
+        android:layout_below="@+id/usernameLabel"
         android:layout_alignRight="@+id/Stud_name"
         android:layout_marginTop="25dp"
         android:ems="10"
         android:inputType="date" />
 
     <TextView
-        android:id="@+id/Birth"
+        android:id="@+id/usernameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Stud_name"
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/bookTitle_tf"
         android:layout_marginTop="80dp"
-        android:layout_toRightOf="@+id/Birth"
+        android:layout_toRightOf="@+id/usernameLabel"
         android:text="ADD_stu" />
 
 </RelativeLayout>
