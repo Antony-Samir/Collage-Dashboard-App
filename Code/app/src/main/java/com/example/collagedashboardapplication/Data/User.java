@@ -1,4 +1,4 @@
-package com.example.collagedashboardapplication;
+package com.example.collagedashboardapplication.Data;
 
 public abstract class User
 {

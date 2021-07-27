@@ -1,4 +1,4 @@
-package com.example.collagedashboardapplication;
+package com.example.collagedashboardapplication.Data;
 
 import android.content.ContentValues;
 import android.content.Context;

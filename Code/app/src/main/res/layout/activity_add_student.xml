@@ -2,57 +2,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddStudent">
-
-    <EditText
-        android:id="@+id/Stud_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/courseNameLabel"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="40dp"
-        android:layout_toRightOf="@+id/courseNameLabel"
-        android:ems="10"
-        android:inputType="textPersonName">
-
-        <requestFocus />
-    </EditText>
+    tools:context=".AddStudentActivity">
 
     <TextView
         android:id="@+id/courseNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="25dp"
-        android:text="Stud_name" />
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="54dp"
+        android:text="@string/student_name" />
 
     <EditText
-        android:id="@+id/bookTitleTxt"
+        android:id="@+id/studentNameTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/usernameLabel"
-        android:layout_alignRight="@+id/Stud_name"
-        android:layout_marginTop="25dp"
+        android:layout_below="@+id/courseNameLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="-13dp"
+        android:layout_marginTop="43dp"
+        android:layout_toEndOf="@+id/courseNameLabel"
         android:ems="10"
-        android:inputType="date" />
+        android:inputType="textPersonName"
+        android:importantForAutofill="no">
+
+        <requestFocus />
+    </EditText>
 
     <TextView
         android:id="@+id/usernameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Stud_name"
-        android:layout_alignLeft="@+id/courseNameLabel"
-        android:layout_marginTop="36dp"
-        android:text="Birth" />
+        android:layout_below="@+id/studentNameTxt"
+        android:layout_alignStart="@+id/courseNameLabel"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/date_of_birth" />
 
-    <Button
-        android:id="@+id/button1"
+    <EditText
+        android:id="@+id/dateOfBirthTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/bookTitleTxt"
-        android:layout_marginTop="80dp"
-        android:layout_toRightOf="@+id/usernameLabel"
-        android:text="ADD_stu" />
+        android:layout_below="@+id/usernameLabel"
+        android:layout_alignEnd="@+id/studentNameTxt"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="date"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/addStudentBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateOfBirthTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="137dp"
+        android:layout_toEndOf="@+id/usernameLabel"
+        android:text="@string/add_student" />
 
 </RelativeLayout>

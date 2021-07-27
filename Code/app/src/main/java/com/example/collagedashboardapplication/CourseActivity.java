@@ -24,13 +24,14 @@ public class CourseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course);
 
-         cdata=new CoursesData(getApplicationContext());
-        ListView list=(ListView)findViewById(R.id.listView);
+        cdata=new CoursesData(getApplicationContext());
+        ListView list = (ListView)findViewById(R.id.listView);
         final ArrayAdapter<String> listAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
         list.setAdapter(listAdapter);
 
-        try{
-             cursor = cdata.getAllCourses();
+        try
+        {
+            cursor = cdata.getAllCourses();
             while (!cursor.isAfterLast())
             {
                 listAdapter.add(cursor.getString(1));
@@ -43,13 +44,15 @@ public class CourseActivity extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent=new Intent (CourseActivity.this,CourseDetails.class);
+                Intent intent=new Intent (CourseActivity.this, CourseDetailsActivity.class);
                 cursor.moveToPosition(i);
                 intent.putExtra("id",cursor.getInt(0));
                 startActivity(intent);
 
             }
         });
+
+
         Button add_btn=(Button)findViewById(R.id.AddCourseBtn);
         add_btn.setOnClickListener(new View.OnClickListener() {
 
@@ -60,8 +63,7 @@ public class CourseActivity extends AppCompatActivity {
                 startActivity(add_course);
             }
         });
+
+
     }
-
-
-
 }

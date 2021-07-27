@@ -10,8 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.collagedashboardapplication.Data.AttendanceData;
 import com.example.collagedashboardapplication.Data.CoursesData;
 import com.example.collagedashboardapplication.Data.Student;
+import com.example.collagedashboardapplication.Data.StudentsData;
 
-public class StudentDetails extends AppCompatActivity {
+public class StudentDetailsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +20,8 @@ public class StudentDetails extends AppCompatActivity {
         setContentView(R.layout.activity_student_details);
 
         StudentsData stud=new StudentsData(this);
-        int studentid = getIntent().getExtras().getInt("StudentID");
-        Student student = stud.getById(studentid);
+        int studentId = getIntent().getExtras().getInt("StudentID");
+        Student student = stud.getById(studentId);
 
         TextView IdText = findViewById(R.id.DetailsStudentID);
         IdText.setText("ID:"+ student.getId());
@@ -31,11 +32,14 @@ public class StudentDetails extends AppCompatActivity {
         TextView CoursesText = findViewById(R.id.DetailsCourses);
 
         String s = "Courses: ";
-        try {
+        try
+        {
             AttendanceData ad = new AttendanceData(this);
             Cursor c = new CoursesData(this).getAllCourses();
-            while (!c.isAfterLast()) {
-                if (ad.getCount(studentid, c.getInt(0)) > -1) {
+            while (!c.isAfterLast())
+            {
+                if (ad.getCount(studentId, c.getInt(0)) > -1)
+                {
                     s += c.getString(1) + ", ";
                 }
             }

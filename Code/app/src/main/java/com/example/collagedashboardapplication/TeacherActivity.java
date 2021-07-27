@@ -53,7 +53,7 @@ public class TeacherActivity extends AppCompatActivity {
             {
                 Toast.makeText(getApplicationContext(), ((TextView)arg1).getText().toString(), Toast.LENGTH_LONG).show();
 
-                Intent i = new Intent(TeacherActivity.this, com.example.collagedashboardapplication.AttendaceActivity.class);
+                Intent i = new Intent(TeacherActivity.this, AttendanceActivity.class);
                 startActivity(i);
             }
         });

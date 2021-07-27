@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.collagedashboardapplication.Data.StudentsData;
+
 public class AllStudentsActivity extends AppCompatActivity {
     ListView studentList;
     ArrayAdapter<String> StudentAdapter;
@@ -29,7 +31,7 @@ public class AllStudentsActivity extends AppCompatActivity {
         studentList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent=new Intent(AllStudentsActivity.this, com.example.collagedashboardapplication.StudentDetails.class);
+                Intent intent=new Intent(AllStudentsActivity.this, StudentDetailsActivity.class);
                 cursor.moveToPosition(i);
                 intent.putExtra("StudentID",cursor.getInt(0));
                 startActivity(intent);
@@ -46,7 +48,7 @@ public class AllStudentsActivity extends AppCompatActivity {
     }
 
     private void ToDo() {
-        studentList = findViewById(R.id.ShowStud);
+        studentList = findViewById(R.id.showAllStudents);
         StudentAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1);
         studentList.setAdapter(StudentAdapter);
 
@@ -65,12 +67,12 @@ public class AllStudentsActivity extends AppCompatActivity {
         }
 
 
-        Button add = findViewById(R.id.button5);
+        Button add = findViewById(R.id.addStudentsBtn);
         add.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                Intent i = new Intent(AllStudentsActivity.this, com.example.collagedashboardapplication.AddStudent.class);
+                Intent i = new Intent(AllStudentsActivity.this, AddStudentActivity.class);
                 startActivity(i);
             }
         });

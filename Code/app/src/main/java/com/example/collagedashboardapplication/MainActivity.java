@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.collagedashboardapplication.Data.Admin;
+import com.example.collagedashboardapplication.Data.Teacher;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
