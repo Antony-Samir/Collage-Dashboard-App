@@ -6,7 +6,8 @@ public class Student {
     private String name;
     private String birthdate;
 
-    public Student(int id, String name, String birthdate) {
+    public Student(int id, String name, String birthdate)
+    {
         this.id = id;
         this.name = name;
         this.birthdate = birthdate;

@@ -14,8 +14,8 @@ public class AdminActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
 
-        Button coursesBtn = findViewById(R.id.button2);
-        Button studentsBtn = findViewById(R.id.button3);
+        Button coursesBtn = findViewById(R.id.coursesBtn);
+        Button studentsBtn = findViewById(R.id.studentsBtn);
 
         coursesBtn.setOnClickListener(new View.OnClickListener()
         {

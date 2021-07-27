@@ -1,30 +1,36 @@
 package com.example.collagedashboardapplication.Data;
 
-public class Student {
+public class Student
+{
 
     private int id;
     private String name;
     private String birthdate;
 
-    public Student(int id, String name, String birthdate) {
+    public Student(int id, String name, String birthdate)
+    {
         this.id = id;
         this.name = name;
         this.birthdate = birthdate;
     }
 
-    public int getId() {
+    public int getId()
+    {
         return id;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    public String getBirthdate() {
+    public String getBirthdate()
+    {
         return birthdate;
     }
 

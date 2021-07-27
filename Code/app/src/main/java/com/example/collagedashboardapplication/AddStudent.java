@@ -15,7 +15,7 @@ public class AddStudent extends Activity {
 		setContentView(R.layout.activity_add_student);
 		Button add_stu=(Button)findViewById(R.id.button1);
 		final EditText name=(EditText)findViewById(R.id.Stud_name);
-		final EditText date=(EditText)findViewById(R.id.bookTitle_tf);
+		final EditText date=(EditText)findViewById(R.id.bookTitleTxt);
 		
 		add_stu.setOnClickListener(new View.OnClickListener() {
 			

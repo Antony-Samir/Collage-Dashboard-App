@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 int password1 = 159;
                 Teacher teacher = new Teacher(name1, password1);
 
-                String fName = ((EditText)findViewById(R.id.loginUsernameTxt)).getText().toString();
+                String fName = ((EditText)findViewById(R.id.courseIdTxt)).getText().toString();
 
 
                 int sPassword = Integer.parseInt(((EditText)findViewById(R.id.loginPasswordTxt)).getText().toString());

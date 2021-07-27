@@ -71,16 +71,18 @@ public class AttendanceData extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteStudentInCourse(int studentId,int courseId) {
-
+    public boolean deleteStudentInCourse(int studentId,int courseId)
+    {
         return AttendanceDb.delete("attendance","studentId=" + studentId + " AND " + "courseId=" + courseId,null) > 0;
     }
 
-    public boolean deleteCourse(int id)  {
+    public boolean deleteCourse(int id)
+    {
         return AttendanceDb.delete("attendance","courseId=" + id,null) > 0;
     }
 
-    public boolean deleteStudent(int id) {
+    public boolean deleteStudent(int id)
+    {
         return AttendanceDb.delete("attendance","studentId=" + id,null) > 0;
     }
 }
