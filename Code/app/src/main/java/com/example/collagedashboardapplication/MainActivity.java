@@ -18,46 +18,38 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         Button addBtn = findViewById(R.id.loginBtn);
 
+        addBtn.setOnClickListener(V -> {
 
+            String adminName = "Admin";
+            int adminPassword = 123;
+            Admin admin = new Admin(adminName, adminPassword);
 
+            String teacherName = "Teacher";
+            int teacherPassword = 159;
+            Teacher teacher = new Teacher(teacherName, teacherPassword);
 
-        addBtn.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View V)
+            String username = ((EditText)findViewById(R.id.loginUsernameTxt)).getText().toString();
+            int password = Integer.parseInt(((EditText)findViewById(R.id.loginPasswordTxt)).getText().toString());
+
+            if ((username.equals(admin.name)) && (password == admin.Password))
             {
-                //Intent ii = new Intent(MainActivity.this, AllStudentsActivity.class);
-                //startActivity(ii);
-
-                String name = "Admin";
-                int password = 123;
-                Admin admin = new Admin(name, password);
-
-                String name1 = "Teacher";
-                int password1 = 159;
-                Teacher teacher = new Teacher(name1, password1);
-
-                String fName = ((EditText)findViewById(R.id.courseIdTxt)).getText().toString();
-
-
-                int sPassword = Integer.parseInt(((EditText)findViewById(R.id.loginPasswordTxt)).getText().toString());
-
-                if ((fName.equals(admin.name)) && (sPassword == admin.Password))
-                {
-                    Intent i = new Intent(MainActivity.this, AdminActivity.class);
-                    startActivity(i);
-                }
-                else if ((fName.equals(teacher.name)) && (sPassword == teacher.Password))
-                {
-                    Intent i = new Intent(MainActivity.this, TeacherActivity.class);
-                    startActivity(i);
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "User name or Password isn't correct", Toast.LENGTH_LONG).show();
-                }
+                Intent i = new Intent(MainActivity.this, AdminActivity.class);
+                startActivity(i);
+            }
+            else if ((username.equals(teacher.name)) && (password == teacher.Password))
+            {
+                Intent i = new Intent(MainActivity.this, TeacherActivity.class);
+                startActivity(i);
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(), "User name or Password isn't correct", Toast.LENGTH_LONG).show();
             }
         });
+
     }
 }

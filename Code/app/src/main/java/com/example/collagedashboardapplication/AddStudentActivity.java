@@ -34,7 +34,7 @@ public class AddStudentActivity extends Activity {
 					String n = name.getText().toString();
 					String d = date.getText().toString();
 					Student stud = new Student(0, n, d);
-					new StudentsData(getApplicationContext()).add(stud);
+					new StudentsData(getApplicationContext()).createNewStudent(stud);
 					name.setText("");
 					date.setText("");
 				}

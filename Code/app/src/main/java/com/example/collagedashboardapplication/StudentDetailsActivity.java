@@ -45,7 +45,7 @@ public class StudentDetailsActivity extends AppCompatActivity {
             }
         }
         catch (Exception e) {
-            Toast.makeText(getApplicationContext(), "No courses", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "No courses!", Toast.LENGTH_LONG).show();
         }
 
         CoursesText.setText(s);

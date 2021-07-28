@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.collagedashboardapplication.Data.CoursesData;
 
-public class CourseActivity extends AppCompatActivity {
+public class AllCourseActivity extends AppCompatActivity {
 
     CoursesData cdata;
     Cursor cursor;
@@ -22,7 +22,7 @@ public class CourseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_course);
+        setContentView(R.layout.activity_all_course);
 
         cdata=new CoursesData(getApplicationContext());
         ListView list = (ListView)findViewById(R.id.listView);
@@ -44,7 +44,7 @@ public class CourseActivity extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent=new Intent (CourseActivity.this, CourseDetailsActivity.class);
+                Intent intent=new Intent (AllCourseActivity.this, CourseDetailsActivity.class);
                 cursor.moveToPosition(i);
                 intent.putExtra("id",cursor.getInt(0));
                 startActivity(intent);
@@ -59,7 +59,7 @@ public class CourseActivity extends AppCompatActivity {
             @Override
             public void onClick(View arg0) {
                 // TODO Auto-generated method stub
-                Intent add_course =new Intent(CourseActivity.this,AddCoursesActivity.class);
+                Intent add_course =new Intent(AllCourseActivity.this,AddCoursesActivity.class);
                 startActivity(add_course);
             }
         });

@@ -21,7 +21,7 @@ public class AdminActivity extends AppCompatActivity {
         {
             public void onClick(View V)
             {
-                Intent i = new Intent(AdminActivity.this, CourseActivity.class);
+                Intent i = new Intent(AdminActivity.this, AllCourseActivity.class);
                 startActivity(i);
             }
         });
@@ -34,5 +34,6 @@ public class AdminActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
     }
 }

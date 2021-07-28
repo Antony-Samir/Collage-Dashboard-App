@@ -25,15 +25,15 @@ public class AttendanceData extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
+    {
         db.execSQL("drop table if exists attendance");
         onCreate(db);
 
     }
 
-    public void enroll(Student student, Course course) {
-
+    public void enroll(Student student, Course course)
+    {
         ContentValues cv = new ContentValues();
         AttendanceDb = getWritableDatabase();
         cv.put("studentId", student.getId());

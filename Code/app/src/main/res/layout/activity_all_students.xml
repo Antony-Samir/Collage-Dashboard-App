@@ -6,46 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".AllStudentsActivity">
 
-    <TextView
-        android:id="@+id/courseIdLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="107dp"
-        android:layout_marginBottom="37dp"
-        android:text="@string/all_students"
-        app:layout_constraintBottom_toTopOf="@id/addStudentsBtn"
-        app:layout_constraintEnd_toStartOf="@+id/addStudentsBtn"
+    <ListView
+        android:id="@+id/showAllStudents"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/addStudentsBtn"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/addStudentsBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="100dp"
         android:text="@string/add_student"
-        app:layout_constraintBottom_toTopOf="@id/courseIdLabel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/courseIdLabel"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ListView
-        android:id="@+id/showAllStudents"
-        android:layout_width="409dp"
-        android:layout_height="583dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addStudentsBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/showAllStudents" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

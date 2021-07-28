@@ -76,6 +76,8 @@ public class AllStudentsActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
     }
 }
 

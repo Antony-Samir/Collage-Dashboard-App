@@ -30,7 +30,7 @@ public class TeacherActivity extends AppCompatActivity {
         {
             Course[] course = CD.allCourses();
 
-            for (int i =0; i<course.length; i++)
+            for (int i = 0; i < course.length; i++)
             {
                 listAdapter.add(course[i].getName());
             }

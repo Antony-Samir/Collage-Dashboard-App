@@ -22,19 +22,20 @@ public class CoursesData extends SQLiteOpenHelper
     @Override
     public void onCreate(SQLiteDatabase sq)
     {
-        sq.execSQL("create table courses (id integer primary key, name text not null, hours integer not null, book text not null)");
+        sq.execSQL("create table courses (id integer primary key," +
+                "name text not null, hours integer not null," +
+                "book text not null)");
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sq, int i, int i1)
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
-        sq.execSQL("drop table if exists courses");
-        onCreate(sq);
+        db.execSQL("drop table if exists courses");
+        onCreate(db);
     }
 
     public Cursor getAllCourses()
     {
-
         CoursesDb = getReadableDatabase();
         String[] r = {"id", "name", "hours", "book"};
         Cursor c = CoursesDb.query("courses", r, null, null, null, null, null);

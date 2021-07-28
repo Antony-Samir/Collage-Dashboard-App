@@ -18,19 +18,43 @@ public class Course {
         this.book = book;
     }
 
-    public int getId() {
+    public void setId(int id)
+    {
+        this.id = id;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public void setHours(int hours)
+    {
+        this.hours = hours;
+    }
+
+    public void setBook(String book)
+    {
+        this.book = book;
+    }
+
+    public int getId()
+    {
         return id;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public int getHours() {
+    public int getHours()
+    {
         return hours;
     }
 
-    public String getBook() {
+    public String getBook()
+    {
         return book;
     }
 

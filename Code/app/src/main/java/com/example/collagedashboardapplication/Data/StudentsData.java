@@ -18,18 +18,22 @@ public class StudentsData extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("create table students (id integer primary key autoincrement, name text not null, birthdate text not null)");
+    public void onCreate(SQLiteDatabase sqLiteDatabase)
+    {
+        sqLiteDatabase.execSQL("create table students (id integer primary key autoincrement," +
+                "name text not null," +
+                "birthdate text not null)");
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("drop table if exists students");
-        onCreate(sqLiteDatabase);
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
+    {
+        db.execSQL("drop table if exists students");
+        onCreate(db);
     }
 
-    public void add(com.example.collagedashboardapplication.Data.Student student) {
-
+    public void createNewStudent(com.example.collagedashboardapplication.Data.Student student)
+    {
         ContentValues cv = new ContentValues();
         cv.put("name", student.getName());
         cv.put("birthdate", student.getBirthdate());
@@ -39,8 +43,8 @@ public class StudentsData extends SQLiteOpenHelper {
 
     }
 
-    public Cursor getAllStudents() {
-
+    public Cursor getAllStudents()
+    {
         StudentsDb = getReadableDatabase();
         String[] r = {"id", "name", "birthdate"};
         Cursor c = StudentsDb.query("students", r, null, null, null, null, null);
@@ -50,11 +54,12 @@ public class StudentsData extends SQLiteOpenHelper {
         return c;
     }
 
-    public com.example.collagedashboardapplication.Data.Student[] allStudents() {
-
+    public com.example.collagedashboardapplication.Data.Student[] allStudents()
+    {
         ArrayList<com.example.collagedashboardapplication.Data.Student> list = new ArrayList<>();
         Cursor c = getAllStudents();
-        while (!c.isAfterLast()) {
+        while (!c.isAfterLast())
+        {
             int id = c.getInt(0);
             String name = c.getString(1);
             String bd = c.getString(2);
@@ -65,17 +70,16 @@ public class StudentsData extends SQLiteOpenHelper {
 
     }
 
-    public void edit(com.example.collagedashboardapplication.Data.Student student) {
-
+    public void edit(com.example.collagedashboardapplication.Data.Student student)
+    {
         ContentValues cv = new ContentValues();
         cv.put("name", student.getName());
         cv.put("birthdate", student.getBirthdate());
         StudentsDb.update("students", cv, "id=" + student.getId(), null);
-
     }
 
-    public Boolean delete(int id) {
-
+    public Boolean delete(int id)
+    {
         return StudentsDb.delete("students", "id=" + id, null) > 0;
     }
 
@@ -88,7 +92,6 @@ public class StudentsData extends SQLiteOpenHelper {
             c.moveToFirst();
         StudentsDb.close();
         return new com.example.collagedashboardapplication.Data.Student(c.getInt(0), c.getString(1), c.getString(2));
-
     }
 
 }
