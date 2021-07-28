@@ -78,9 +78,11 @@ public class StudentsData extends SQLiteOpenHelper {
         StudentsDb.update("students", cv, "id=" + student.getId(), null);
     }
 
-    public Boolean delete(int id)
+    public void delete(String name)
     {
-        return StudentsDb.delete("students", "id=" + id, null) > 0;
+        StudentsDb = getWritableDatabase();
+        StudentsDb.delete("students", "name='" + name + "'", null);
+        StudentsDb.close();
     }
 
     public com.example.collagedashboardapplication.Data.Student getById(int id) {

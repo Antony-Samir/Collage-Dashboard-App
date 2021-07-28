@@ -23,7 +23,8 @@ public class CoursesData extends SQLiteOpenHelper
     public void onCreate(SQLiteDatabase sq)
     {
         sq.execSQL("create table courses (id integer primary key," +
-                "name text not null, hours integer not null," +
+                "name text not null," +
+                "hours integer not null," +
                 "book text not null)");
     }
 
@@ -82,9 +83,11 @@ public class CoursesData extends SQLiteOpenHelper
         CoursesDb.update("courses", cv, "id=" + course.getId(), null);
     }
 
-    public Boolean delete(int id)
+    public void delete(String name)
     {
-        return CoursesDb.delete("courses", "id=" + id, null) > 0;
+        CoursesDb = getWritableDatabase();
+        CoursesDb.delete("courses", "name='" + name + "'", null);
+        CoursesDb.close();
     }
 
     public Course getById(int id)

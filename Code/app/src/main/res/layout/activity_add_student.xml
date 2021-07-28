@@ -5,7 +5,7 @@
     tools:context=".AddStudentActivity">
 
     <TextView
-        android:id="@+id/courseNameLabel"
+        android:id="@+id/studentNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -18,11 +18,11 @@
         android:id="@+id/studentNameTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/courseNameLabel"
+        android:layout_below="@+id/studentNameLabel"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="-13dp"
         android:layout_marginTop="43dp"
-        android:layout_toEndOf="@+id/courseNameLabel"
+        android:layout_toEndOf="@+id/studentNameLabel"
         android:ems="10"
         android:inputType="textPersonName"
         android:importantForAutofill="no">
@@ -31,11 +31,11 @@
     </EditText>
 
     <TextView
-        android:id="@+id/usernameLabel"
+        android:id="@+id/dateLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/studentNameTxt"
-        android:layout_alignStart="@+id/courseNameLabel"
+        android:layout_alignStart="@+id/studentNameLabel"
         android:layout_marginStart="-2dp"
         android:layout_marginTop="40dp"
         android:text="@string/date_of_birth" />
@@ -44,12 +44,12 @@
         android:id="@+id/dateOfBirthTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/usernameLabel"
+        android:layout_below="@+id/dateLabel"
         android:layout_alignEnd="@+id/studentNameTxt"
         android:layout_marginTop="25dp"
         android:ems="10"
-        android:inputType="date"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/addStudentBtn"
@@ -57,9 +57,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/dateOfBirthTxt"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="137dp"
-        android:layout_toEndOf="@+id/usernameLabel"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="138dp"
+        android:layout_toEndOf="@+id/dateLabel"
         android:text="@string/add_student" />
 
 </RelativeLayout>
