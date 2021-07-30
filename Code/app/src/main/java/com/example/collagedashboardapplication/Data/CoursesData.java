@@ -100,4 +100,6 @@ public class CoursesData extends SQLiteOpenHelper
         CoursesDb.close();
         return new Course(c.getInt(0), c.getString(1), c.getInt(2), c.getString(3));
     }
+
+
 }

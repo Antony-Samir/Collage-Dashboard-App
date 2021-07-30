@@ -1,6 +1,7 @@
 package com.example.collagedashboardapplication;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,23 +17,26 @@ import com.example.collagedashboardapplication.Data.CoursesData;
 
 public class TeacherActivity extends AppCompatActivity {
 
+    CoursesData cdata;
+    Cursor cursor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher);
 
-        CoursesData CD = new CoursesData(getApplicationContext());
+        cdata = new CoursesData(getApplicationContext());
         ListView myList = findViewById(R.id.teacherCourseList);
         final ArrayAdapter<String> listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
         myList.setAdapter(listAdapter);
 
         try
         {
-            Course[] course = CD.allCourses();
-
-            for (int i = 0; i < course.length; i++)
+            cursor = cdata.getAllCourses();
+            while (!cursor.isAfterLast())
             {
-                listAdapter.add(course[i].getName());
+                listAdapter.add(cursor.getString(1));
+                cursor.moveToNext();
             }
         }
         catch (Exception ex)
@@ -53,7 +57,7 @@ public class TeacherActivity extends AppCompatActivity {
             {
                 Toast.makeText(getApplicationContext(), ((TextView)arg1).getText().toString(), Toast.LENGTH_LONG).show();
 
-                Intent i = new Intent(TeacherActivity.this, AttendanceActivity.class);
+                Intent i = new Intent(TeacherActivity.this, EnrollActivity.class);
                 startActivity(i);
             }
         });

@@ -24,11 +24,11 @@ public class StudentDetailsActivity extends AppCompatActivity {
         Student student = stud.getById(studentId);
 
         TextView IdText = findViewById(R.id.DetailsStudentID);
-        IdText.setText("ID:"+ student.getId());
+        IdText.setText("ID: " + student.getId());
         TextView NameText = findViewById(R.id.detailsName);
-        NameText.setText("NAME:"+ student.getName());
+        NameText.setText("Name: " + student.getName());
         TextView dateText = findViewById(R.id.detailsDate);
-        dateText.setText("BirthDate:"+ student.getBirthdate());
+        dateText.setText("BirthDate: " + student.getBirthdate());
         TextView CoursesText = findViewById(R.id.DetailsCourses);
 
         String s = "Courses: ";

@@ -1,14 +1,14 @@
 package com.example.collagedashboardapplication;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AttendanceActivity extends AppCompatActivity {
+import android.os.Bundle;
+
+public class EnrollActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_attendace);
+        setContentView(R.layout.activity_enroll);
     }
 }

@@ -18,10 +18,9 @@ public class AttendanceData extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
-
+    public void onCreate(SQLiteDatabase db)
+    {
         db.execSQL("create table attendance (studentId integer not null, courseId integer not null, count integer not null)");
-
     }
 
     @Override
@@ -29,7 +28,6 @@ public class AttendanceData extends SQLiteOpenHelper {
     {
         db.execSQL("drop table if exists attendance");
         onCreate(db);
-
     }
 
     public void enroll(Student student, Course course)
@@ -55,7 +53,6 @@ public class AttendanceData extends SQLiteOpenHelper {
         int i = c.getInt(2);
         AttendanceDb.close();
         return i;
-
     }
 
     public void updateCount(int studentId, int courseId) {
@@ -68,7 +65,6 @@ public class AttendanceData extends SQLiteOpenHelper {
         String whereClause = "studentId=" + studentId;
         whereClause += " AND courseId=" + courseId;
         AttendanceDb.update("attendance", cv, whereClause, null);
-
     }
 
     public boolean deleteStudentInCourse(int studentId,int courseId)

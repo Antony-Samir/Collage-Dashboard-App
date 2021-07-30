@@ -40,7 +40,6 @@ public class StudentsData extends SQLiteOpenHelper {
         StudentsDb = getWritableDatabase();
         StudentsDb.insert("students", null, cv);
         StudentsDb.close();
-
     }
 
     public Cursor getAllStudents()
@@ -67,7 +66,6 @@ public class StudentsData extends SQLiteOpenHelper {
             c.moveToNext();
         }
         return (com.example.collagedashboardapplication.Data.Student[]) list.toArray();
-
     }
 
     public void edit(com.example.collagedashboardapplication.Data.Student student)

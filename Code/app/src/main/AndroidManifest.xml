@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CollageDashboardApplication">
-        <activity android:name=".CourseDetailsActivity"></activity>
+        <activity android:name=".EnrollActivity"></activity>
+        <activity android:name=".CourseDetailsActivity" />
         <activity android:name=".StudentDetailsActivity" />
         <activity android:name=".AllStudentsActivity" />
-        <activity android:name=".AttendanceActivity" />
         <activity android:name=".AddCoursesActivity" />
         <activity android:name=".AllCourseActivity" />
         <activity android:name=".AdminActivity" />

@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final EditText username = (EditText)findViewById(R.id.loginUsernameTxt);
+        final EditText password = (EditText)findViewById(R.id.loginPasswordTxt);
+
 
         Button addBtn = findViewById(R.id.loginBtn);
 
@@ -32,15 +35,13 @@ public class MainActivity extends AppCompatActivity {
             int teacherPassword = 159;
             Teacher teacher = new Teacher(teacherName, teacherPassword);
 
-            String username = ((EditText)findViewById(R.id.loginUsernameTxt)).getText().toString();
-            int password = Integer.parseInt(((EditText)findViewById(R.id.loginPasswordTxt)).getText().toString());
 
-            if ((username.equals(admin.name)) && (password == admin.Password))
+            if ((username.getText().toString().equals(admin.name)) && (Integer.parseInt(password.getText().toString()) == admin.Password))
             {
                 Intent i = new Intent(MainActivity.this, AdminActivity.class);
                 startActivity(i);
             }
-            else if ((username.equals(teacher.name)) && (password == teacher.Password))
+            else if ((username.getText().toString().equals(teacher.name)) && (Integer.parseInt(password.getText().toString()) == teacher.Password))
             {
                 Intent i = new Intent(MainActivity.this, TeacherActivity.class);
                 startActivity(i);
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
             {
                 Toast.makeText(getApplicationContext(), "User name or Password isn't correct", Toast.LENGTH_LONG).show();
             }
+            username.setText("");
+            password.setText("");
         });
 
     }

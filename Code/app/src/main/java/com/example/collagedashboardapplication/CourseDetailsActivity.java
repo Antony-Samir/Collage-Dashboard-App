@@ -29,10 +29,10 @@ public class CourseDetailsActivity extends AppCompatActivity {
         TextView c_bookTitle = findViewById(R.id.bookTitle_details);
         TextView c_students = findViewById((R.id.student_details));
 
-        c_id.setText("Id:"+" "+course.getId());
-        c_name.setText("Name"+" "+course.getName());
-        c_creditH.setText("Credit Hours"+" "+course.getHours());
-        c_bookTitle.setText("Book Title"+" "+course.getBook());
+        c_id.setText("Id: " + " " + course.getId());
+        c_name.setText("Name: " + " " + course.getName());
+        c_creditH.setText("Credit Hours: " + " " + course.getHours());
+        c_bookTitle.setText("Book Title: " + " " + course.getBook());
         String str = "Student";
         try
         {

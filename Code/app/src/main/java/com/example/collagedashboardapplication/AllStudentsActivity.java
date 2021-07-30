@@ -82,12 +82,12 @@ public class AllStudentsActivity extends AppCompatActivity {
     {
         AdapterView.AdapterContextMenuInfo info =
                 (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-        String selectedMovie = ((TextView) info.targetView).getText().toString();
+        String selectedStudent = ((TextView) info.targetView).getText().toString();
 
         int id = item.getItemId();
         if (id == R.id.item_delete) {
-            //movieAdapter.remove(selectedMovie);
-            //movies.deleteMovie(selectedMovie);
+            StudentAdapter.remove(selectedStudent);
+            students.delete(selectedStudent);
             return true;
         }
         if (id == R.id.item_update) {
